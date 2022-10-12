@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src=".//assets/js/script.js"></script>
+    <title>Craques do Cerrado</title>
+</head>
+
+<main>
+    <!--Criando o menu superior-->
+     <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Craques do Cerrado</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#box3" class="nav-link">História e tutores</a></li>
+                    <li class="nav-item"><a href="#box5" class="nav-link">Dicas pra inscrição</a></li>
+                    <li class="nav-item"><a href="#cadastroAluno" class="nav-link">Cadastro</a></li>
+                    <li class="nav-item"><a href="#listaAlunos" class="nav-link">Lista de alunos</a></li>
+                </ul>
+            </div>
+
+            <!--Inserindo responsividade ao menu-->
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src=".//assets/img/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#box3" class="nav-link">História e tutores</a></li>
+                <li class="nav-item"><a href="#box5" class="nav-link">Dicas pra inscrição</a></li>
+                <li class="nav-item"><a href="#cadastroAluno" class="nav-link">Cadastro</a></li>
+                <li class="nav-item"><a href="#listaAlunos" class="nav-link">Lista de alunos</a></li>
+            </ul>
+        </div>
+
+     </header>
+
+     <body>
+        <div class="conteudo">
+            <section id="#box1" class="box1">
+                <h1>Formando craques desde 1995</h1>
+                <h2>Traga seu filho para fazer parte da mais antiga e tradicional escolinha de futebol de Uberlândia.</h2>
+            </section>
+
+
+                <section id= "box2" class="box2">
+                    <img class="imagem" src=".//assets/img/crianças futebol.jpg" title="Alunos da escolinha treinando em janeiro de 2022" alt="Alunos da escolinha treinando em janeiro de 2022">
+                </section>
+
+            <section id="box3" class="box3">
+            <h1>História e tutores</h1>
+                    <div class="historia">
+                        <h2>A escolinha de futebol mais tradicional de Uberlândia</h2>
+                        <h3>A Craques do Cerrado foi fundada em 1943 e, desde então, é a maior, melhor e mais completa escolinha de futebol da cidade.</h3>
+                        <h3>Para inscrever o seu filho, basta descer a tela mais um pouco e preencher o formulário com os dados solicitados. Lembre-se, todos os campos são obrigatórios.</h3>
+                    </div>
+
+                    <div class="professores">
+                        <h2>Contamos com profissionais renomados</h2>
+                        <h3>Paulo Baier, Aloisio Chulapa e Craque Neto estão prontos para ensinar ao seu filho o melhor que o futebol brasileiro tem a oferecer.</h3>
+                    </div>
+            </section>
+
+
+                <section id="box4" class="box4">
+                    <img class="imagem" src=".//assets/img/imagem2.jpg" title="Aluno marcando gol" alt="Aluno marcando gol">
+                </section>
+
+
+            <section id="box5" class="box5">
+                <h1>Dicas para inscrição</h1>
+                <h2>Preencha a tabela abaixo para garantir que seu filho tenha acesso ao do futebol brasileiro.</h2>
+                <h3>Após preencher, confira os dados na tabela abaixo. Caso haja algum erro, clique no botão ao fim da linha para remover e preencha novamente o formulário.</h3>
+
+            </section>
+
+            <section id="cadastroAluno" class="cadastroAluno">
+
+                <form>
+                    <div>
+                        <label>Nome do aluno:</label>
+                        <input type="text" name="nome" id="nome" required placeholder="Nome do aluno">
+                    </div>   
+                    <div>                 
+                        <label>CPF do aluno</label>
+                        <input type="text" name="CPF" id="CPF" required placeholder="CPF">
+                    </div>
+                    <div>
+                        <label>Idade do aluno:</label>
+                        <input type="text" name="idade" id="idade" required placeholder="Idade do aluno">
+                    </div>
+                    <div>
+                        <label>E-mail do aluno:</label>
+                        <input type="email" name="email" id="email" required placeholder="Digite o e-mail">
+                    </div>    
+                        <!--Adicionando evento para que quando o usuario clique no botão "cadastrar" ative a nossa função do Javascript "cadastrar"-->
+                    <div>    
+                        <input type="submit" class="btn" value="CADASTRAR" onclick="aluno.cadastrar()">
+                    </div>
+                </form>    
+            </section>
+
+            <section id="#listaAlunos" class="listaAlunos">
+                <h1>Lista de alunos</h1>
+                <table>
+                    <thead>
+                        <th>Nome do aluno</th>
+                        <th>CPF do aluno</th>
+                        <th>Idade do aluno</th>
+                        <th>E-mail do aluno</th>
+                        <th>Remover</th>
+                    </thead>
+                    <tbody id="tbody">
+                        <td>João da Silva Martins</td>
+                        <td>057.859.658-19</td>
+                        <td>15</td>
+                        <td>joao@gmail.com</td>
+                        <!--Adicionando evento para que quando o usuario clique no botão de remover ative a nossa função do Javascript "excluir"-->
+                        <td><button onclick="aluno.excluir()"> <img src=".//assets/img/remove.png"> </button></td>
+                    </tbody>
+                    <tbody id="tbody">
+                        <td>Pedro Pereira Oliveira</td>
+                        <td>058.589.257-11</td>
+                        <td>15</td>
+                        <td>Pedro@gmail.com</td>
+                        <!--Adicionando evento para que quando o usuario clique no botão de remover ative a nossa função do Javascript "excluir"-->
+                        <td><button onclick="aluno.excluir()"> <img src=".//assets/img/remove.png"> </button></td>
+                    </tbody>
+                    <tbody id="tbody">
+                        <td>Murilo Lima dos Santos</td>
+                        <td>256.256.657-17</td>
+                        <td>16</td>
+                        <td>Murilo@gmail.com</td>
+                        <!--Adicionando evento para que quando o usuario clique no botão de remover ative a nossa função do Javascript "excluir"-->
+                        <td><button onclick="aluno.excluir()"> <img src=".//assets/img/remove.png"> </button></td>
+                    </tbody>
+                    <tbody id="tbody">
+                        <td>Gabriel Ferreira dos Reis</td>
+                        <td>192.264.987-15</td>
+                        <td>14</td>
+                        <td>Gabriel@gmail.com</td>
+                        <!--Adicionando evento para que quando o usuario clique no botão de remover ative a nossa função do Javascript "excluir"-->
+                        <td><button onclick="aluno.excluir()"> <img src=".//assets/img/remove.png"> </button></td>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+        <br>
+
+        <footer>
+            <p>
+                Desenvolvido por Danillo Aguiar
+            </p>    
+        </footer>
+
+</main>
+
+    
+
+</body>
+</html>
+
+<!--Este foi meu primeiro projeto prático de programação. Toda a pesquisa e energia gastas no projeto foram muito enriquecedoras. Sei que houveram algumas falhas que não permitiram o site corresponder como proposto, como a função de javascript para incluir os dados do aluno cadastrado na tabela e o botão de remover aluno da tabela.
+Outras funções priorizadas no início acabaram correspondendo bem, como a responsividade do menu superior e das imagens, embora o restante da página não os acompanhe. 
+Infelizmente, sei que algumas falhas não permitam que eu cumpra os requisitos mínimos do projeto, mas caso vejam potencial, estou pronto para assumir o desafio de aprender com vocês.
+Fica aqui o meu agradecimento a MACH1! -->
